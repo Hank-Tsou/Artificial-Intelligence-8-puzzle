@@ -1,31 +1,49 @@
-# Image Contours
+# Artificial Intelligence Game: 8-puzzle
 
-## Outline
-- Image Contours
-- Contour Features
-  - Moments
-  - Contour Area and Perimeter
-  - Contour Approximation
-  - Convex Hull
-  - Bounding Rectangle
-  - Minimum Enclosing Circle and Fitting an Ellipse
-  - Extreme Points
+```
+File description:
+  - main.java: Main function with three different menu options
+  - Board.java: Board information
+  - Solver.java: Solution with using h1(the number of misplace tiles)
+  - Solver2.java: Solution with using h2(Manhattan Distance)
+```
 
-## Image Contours [(Code)](https://github.com/Hank-Tsou/Computer-Vision-OpenCV-Python/blob/master/tutorials/Image_Processing/8_Image_Contours/Image_Contours.py)
-In OpenCV, finding contours is like finding white object from black background. So object to be found should be white and background should be black.   - (from openCV-python tutorial)
-```
-- File name: Image_Contours.py
-- Input image: shapes.png
-- Command Line: python Image_Contours.py -i shapes.png
-```
-```
-Main Function: 
-  - Find Contours: image, contours, hierarchy = cv2.findContours(src_img, mode, method)
-    * return contour structure(list): [ [contour_1] [contour_2] [contour_3] ... ]
-    
-  - Draw Contours: contour_img = cv2.drawContours(src_img, contour, contour_index, color, thickness)
-    * contour_index = -1, draw all the contours.
-```
+## Approach
+
+### a. User Selection: 
+A user interface provide three menu options for the program.
+- (1) Input a specific 8-puzzle configuration
+- (2) Generate random 8-puzzle problem
+- (3) Read 8-puzzle input from the .txt file
+
+### b. Data Structure: 
+In order to improve the performance and speed of the program, This project use ‘character array’ instead of ‘integer array’ and used “1- dimensional” array instead of “2-dimensional” array.
+
+### c. HeuristicFunction:
+- (1) h1: the number of misplaced tiles
+  - Using “for loop” to check if the number is in the right position or not.
+- (2) h2: the sum of the distances of the tiles from their goal position
+  - Use equation: |(i / 3) - char[i] / 3| + |(i % 3) - char[i] % 3| to check how many steps should move to the goal position.
+
+### d. Open Set and Close Set:
+- (1) Open set: the board which has been created but doesn’t consider yet.
+  - Method: add the board into priority queue and use comparator to sort the queue by consider it’s heuristic function and depths.
+- (2) Close Set: the board which already been considered as solution.
+  - Method: put the board into hash map, then the program will check if the new board is already visited or not. 
+  
+### e. Search Cost: 
+Counter add 1 when new child nodes been created.
+
+
+
+
+
+
+
+
+
+
+
 ```python
 cv2.findContours() mode and method:
 
