@@ -39,7 +39,6 @@ Counter add 1 when new child nodes been created.
 - (2) Node information: make every board as a node, the node information contain moves(which is depths), previous node(which is it’s parent).
   - The final depths for the goal steps is the final node’s moves value, and the program can follow the previous node information to print out the each step from the initial state to the final state.
 
-
 ## Analysis
   By comparing the output result, we can find that the average search cost and the average run time from depth 2 to depth 6 for A* search algorithm with using different heuristic function h1 and h2 are almost the same.
   
@@ -48,6 +47,15 @@ Counter add 1 when new child nodes been created.
   Therefore, after testing 5000 random puzzles we can conclude that using A* search algorithm with h2 generates less node and cost less time to solve 8-puzzle problem. Thus, A* search algorithm with Manhattan distance heuristic is more efficient.
 
 
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
+## Acknowledgments
+
+* Author: Hank Tsou
+* Contact: hank630280888@gmail.com
+* Project from California State Polytechnic University, Pomona, Computer Science, CS-4200 Artificial Intelligence
 
 
 
