@@ -1,5 +1,7 @@
 # Artificial Intelligence Game: 8-puzzle
-
+```
+Algorithm: 'A' star Algorithm with 2 different heuristic function
+```
 ```
 File description:
   - main.java: Main function with three different menu options
