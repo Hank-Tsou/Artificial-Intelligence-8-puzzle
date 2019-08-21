@@ -46,6 +46,7 @@ Counter add 1 when new child nodes been created.
 
   Therefore, after testing 5000 random puzzles we can conclude that using A* search algorithm with h2 generates less node and cost less time to solve 8-puzzle problem. Thus, A* search algorithm with Manhattan distance heuristic is more efficient.
 
+![](README_IMG/8puzzel.png)
 
 ## License
 
@@ -56,8 +57,3 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 * Author: Hank Tsou
 * Contact: hank630280888@gmail.com
 * Project from California State Polytechnic University, Pomona, Computer Science, CS-4200 Artificial Intelligence
-
-
-
-
-![](README_IMG/extre_point.png)
